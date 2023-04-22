@@ -54,12 +54,12 @@ namespace Lesson3.Controllers
             return product;
         }
 
-        public async void Delete_Product()
+        public  void Delete_Product()
         {
             var val = _context.Products.FirstOrDefault(p => p.Id == Convert.ToInt32(ID));
             _context.Products.Remove(val);
              _context.SaveChanges();
-            var list = await _context.Products.ToListAsync();
+            var list =  _context.Products.ToList();
             ViewBag.Products = list;
             ViewModel.Products = list;
 
