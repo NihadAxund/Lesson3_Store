@@ -1,6 +1,4 @@
 ﻿@model Lesson3.Models.ProductViewModel
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -82,7 +80,7 @@
                             <p style="color:black; margin-top:10px; margin-bottom:10px; width:100%; text-align:center;">
                                 Description
                             </p>
-                            <textarea asp-for="product.Description">
+                            <textarea required minlength="6" asp-for="product.Description">
                             </textarea>
                             <button type="submit" class="submit">Update</button>
                         </form>
@@ -96,6 +94,7 @@
     <section class="head">
         @foreach (var item in ViewBag.Products)
         {
+            
             <section id="@item.Id" class="Card">
                 <section class="image">
                     <img src=@item.Image_Link alt="@item.Id">

@@ -191,7 +191,7 @@ body {
     width: 100%;
     height: 70%;
     display: flex;
-    justify-content:center
+    justify-content: center
 }
 
 .model_Sec_1_2 {
@@ -208,7 +208,8 @@ body {
 textarea {
     padding: 5px;
     box-shadow: inset 2px 2px 5px #898989, inset -5px -5px 10px #fff;
-    overflow:hidden;
+    overflow: scroll;
+    overflow-x:hidden;
     width: 95%;
     height: 20%;
     border-radius: 15px;
@@ -226,7 +227,7 @@ textarea {
     width: 50%;
     height: 100%;
     display: flex;
-    justify-content:center;
+    justify-content: center;
 }
 
 @keyframes change-shadow {
@@ -258,7 +259,7 @@ textarea {
 
 
 .form {
-    margin-top:25px;
+    margin-top: 25px;
     background-color: #dad9d9;
     border-radius: 20px;
     box-sizing: border-box;
@@ -373,20 +374,20 @@ textarea {
     width: 100%;
 }
 
-.submit:active {
-    background-color: #06b;
+    .submit:active {
+        background-color: #06b;
+    }
+
+.Delete_btn {
+    width: 50%;
+    height: 30%;
+    border-radius: 10px;
+    border: 0;
+    color: white;
+    background-color: red;
+    margin-bottom: 8vh;
 }
 
-.Delete_btn{
-    width:50%;
-    height:30%;
-    border-radius:10px;
-    border:0;
-    color:white;
-    background-color:red;
-    margin-bottom:8vh;
-}
-
-.Delete_btn:hover {
-    background-color: blue;
-}
+    .Delete_btn:hover {
+        background-color: blue;
+    }
