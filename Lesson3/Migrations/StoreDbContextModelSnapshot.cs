@@ -30,11 +30,13 @@ namespace Lesson3.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Image_Link")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<decimal>("Price")
                         .HasColumnType("money");

@@ -27,8 +27,8 @@ namespace Lesson3
         {
             services.AddControllersWithViews();
 
-            var conn = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=StoreDb;Integrated Security=True;Connect " +
-                "Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False";
+            var conn = "Data Source=NIHAD;Initial Catalog=StoreDb;Integrated Security=True;Connect Timeout=30;Encrypt=False;" +
+                "Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False";
             services.AddDbContext<StoreDbContext>(opt =>
             {
                 opt.UseSqlServer(conn);

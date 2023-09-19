@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Lesson3.Migrations
 {
     [DbContext(typeof(StoreDbContext))]
-    [Migration("20230419171659_init")]
+    [Migration("20230501132717_init")]
     partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -32,11 +32,13 @@ namespace Lesson3.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Image_Link")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<decimal>("Price")
                         .HasColumnType("money");
